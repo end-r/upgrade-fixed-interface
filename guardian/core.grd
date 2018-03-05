@@ -1,0 +1,29 @@
+package upgrade version 0.0.1
+
+contract Core is Interface inherits Ownable {
+
+    external implementation Interface;
+
+    external func setImplementation(_impl address){
+        onlyOwner()
+        this.implementation = _impl
+    }
+
+    global func add(uint a, uint b) uint {
+        return implementation.add(a, b);
+    }
+
+    global func sub(uint a, uint b) uint {
+        return implementation.sub(a, b);
+    }
+
+    global func mul(uint a, uint b) uint {
+        return implementation.mul(a, b);
+    }
+
+    global func div(uint a, uint b) uint {
+        return implementation.div(a, b);
+    }
+
+
+}

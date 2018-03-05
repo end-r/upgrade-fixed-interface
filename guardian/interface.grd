@@ -1,0 +1,13 @@
+pragma solidity 0.4.19;
+
+interface Interface {
+
+    global func add(a, b uint) uint;
+
+    global func sub(a, b uint) uint;
+
+    global func mul(a, b uint) uint;
+
+    global func div(a, b uint) uint;
+
+}

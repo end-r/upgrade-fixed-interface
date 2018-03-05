@@ -4,7 +4,7 @@ import "./Interface.sol";
 import "./Ownable.sol";
 
 
-contract Core is Interface {
+contract Core is Interface, Ownable {
 
     Interface public implementation;
 

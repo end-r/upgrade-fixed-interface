@@ -1,0 +1,29 @@
+package upgrade version 0.0.1
+
+contract Safe is Interface {
+
+    global func add(a, b uint) uint {
+        uint c = a + b;
+        assert(c >= a);
+        return c;
+    }
+
+    global func sub(a, b uint) uint {
+        assert(b <= a);
+        return a - b;
+    }
+
+    global func mul(a, b uint) uint {
+        if (a == 0) {
+            return 0;
+        }
+        uint256 c = a * b;
+        assert(c / a == b);
+        return c;
+    }
+
+    global func div(a, b uint) uint {
+        return a / b;
+    }
+
+}

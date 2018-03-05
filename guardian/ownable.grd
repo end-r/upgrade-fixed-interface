@@ -1,0 +1,25 @@
+pragma solidity 0.4.19;
+
+
+contract Ownable {
+
+    external owner address
+
+    indexed event OwnershipTransferred(previousOwner, newOwner address);
+
+    constructor() {
+        owner = msg.sender
+    }
+
+    internal func onlyOwner() {
+        require(msg.sender == owner)
+    }
+
+    global func transferOwnership(newOwner address) {
+        onlyOwner()
+        require(newOwner != address(0))
+        OwnershipTransferred(owner, newOwner)
+        owner = newOwner
+    }
+
+}

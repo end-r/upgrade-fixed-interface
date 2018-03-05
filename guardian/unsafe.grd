@@ -1,0 +1,21 @@
+package upgrade version 0.0.1
+
+contract Unsafe is Interface {
+
+    global func add(a, b uint) uint {
+        return a + b;
+    }
+
+    global func sub(a, b uint) uint {
+        return a - b;
+    }
+
+    global func mul(a, b uint) uint {
+        return a * b;
+    }
+
+    global func div(a, b uint) uint {
+        return a / b;
+    }
+
+}
